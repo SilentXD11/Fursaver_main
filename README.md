@@ -2,19 +2,6 @@
 #### Just Click and Get Your Pet Analysed
 In this project we provide user with feature to examine their pets just by uploading a picture of their pet, that to at the ease of your bed and get the result for cure and also expert advice if subscription mode is on.  
 
-All you need to do is simply click a picture of your pet if its suffering from any disease and just uplaod it. We will provide you with the best related output.
-
-## To run/ Setup over local system 
-1.) Clone the repo using command:
-```bash
-git clone https://github.com/manjotsinghbagha/HackAce.git
-```
-2.) Download model to main directory from link: https://drive.google.com/drive/folders/1ItbzWmwGfkK4agVlVYYF7PrewPwPZwce?usp=sharing                                    
-2.) Create a virtual environment in python and run following
-```bash
-pip install -r requirements.txt
-python manage.py runserver
-```
 Congratulation you are all set :partying_face:
 
 ## Problem solved and Solution:
