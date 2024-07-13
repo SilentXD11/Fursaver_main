@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapbox Location</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        #locationForm {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<form id="locationForm">
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city">
+    <label for="latitude">Latitude:</label>
+    <input type="text" id="latitude" name="latitude">
+    <label for="longitude">Longitude:</label>
+    <input type="text" id="longitude" name="longitude">
+    <button type="button" onclick="updateMap()">Update Map</button>
+</form>
+
+<script>
+    mapboxgl.accessToken = '';
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-74.5, 40], // Default center location
+        zoom: 9 // Default zoom level
+    });
+
+    function updateMap() {
+        var city = document.getElementById('city').value;
+        var latitude = parseFloat(document.getElementById('latitude').value);
+        var longitude = parseFloat(document.getElementById('longitude').value);
+
+        if (!isNaN(latitude) && !isNaN(longitude)) {
+            map.flyTo({
+                center: [longitude, latitude],
+                zoom: 12
+            });
+        } else {
+            alert('Please enter valid latitude and longitude.');
+        }
+    }
+</script>
+
+</body>
+</html>
