@@ -76,5 +76,4 @@ This dieticians will be asked to pay for our service.
 ### Advertisement Model
 Here we could advertise some shops from where pet goods, medicine or curing material could be bought and also could promote specific VET on basis of their subscription and requrement.
 
-## video link
-https://youtu.be/VgzSOwj_Nrc
+
